@@ -12,10 +12,10 @@ import { ConfigService } from '../config.service';
   ],
   providers: [
     {
-      provide:APP_INITIALIZER,
+      provide: APP_INITIALIZER,
       useFactory: (configService: ConfigService) => function () { return configService.load() },
-        deps: [ConfigService],
-        multi: true
+      deps: [ConfigService],
+      multi: true
     }
 
   ],
